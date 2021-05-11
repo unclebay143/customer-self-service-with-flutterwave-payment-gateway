@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+:root{
+    --color-yellow: #FFE74C;
+    --primary-color: #35A7FF;
+    --secondary-color: #38618C;
+}
+
+html body{
+    background-color: var(--secondary-color);
+}
+
+.app__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 5% 97%, 0 100%, 0% 50%);
+    background-color: var(--primary-color);
+    flex-direction: column;
+    gap: 20px;
+}
+
+.custom__btn{
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    outline: none;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+}
+
+.init__btn{
+    color: #222;
+    background-color: #FFFFFF;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+
+.menu__btn{
+    margin: 12px;
+}
+
+
+/* input style */
+
+.tel__input input{
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.tel__input button{
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+
+.network__btn{
+    margin: 1.1rem;
+}
+
+
+
+
+
+
+
+/* SECTION FLOWS */
+.phone__section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone__section > form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.dataPlan__section{
+    flex-direction: row;
+    flex-wrap: wrap;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 100%, 0% 100%);
+    padding: 50px 10px;
+}
+
+
+
+
+
+@media (min-width: 900px){
+    .phone__section > form{
+        display: flex;
+        /* flex-direction: row; */
+        /* gap: 10px; */
+    }
+
+}
