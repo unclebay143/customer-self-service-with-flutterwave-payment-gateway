@@ -18,6 +18,20 @@ html body{
     background-color: var(--secondary-color);
 }
 
+/* BACK BUTTON STYLES */
+.previous__wrapper{
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    padding: 20px 10px;
+}
+
+.custom__btn.back__btn{
+    font-size: 12px;
+    padding: 0.4rem;
+    display: none;
+}
+
 .app__container{
     display: flex;
     justify-content: center;
@@ -51,7 +65,7 @@ html body{
 }
 
 
-/* input style */
+/* BENEFICIARY PHONE NUMBER */
 
 .tel__input input{
     padding: 1rem 2rem;
@@ -59,6 +73,8 @@ html body{
     border: none;
     font-size: 1.1rem;
     font-weight: 500;
+    text-align: center;
+    width: 100%;
 }
 
 .tel__input button{
@@ -76,11 +92,6 @@ html body{
 .network__btn{
     margin: 1.1rem;
 }
-
-
-
-
-
 
 
 /* SECTION FLOWS */
@@ -110,8 +121,10 @@ html body{
 @media (min-width: 900px){
     .phone__section > form{
         display: flex;
-        /* flex-direction: row; */
-        /* gap: 10px; */
+        gap: 2px;
+    }
+    .tel__input input{
+        width: 400px;
     }
 
 }
