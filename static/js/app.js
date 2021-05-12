@@ -6,16 +6,7 @@ const handlePreviousSection = (callback) =>{
     previousButton.addEventListener('click', ()=>callback())
 }
 
-// GET USER BENEFICIARY NUMBER
-const getBeneficiaryNumber = (
-    `
-        <form class="tel__input" onSubmit="getPhoneNumber(event)">
-            <input value="090123456790" type="tel" pattern="[0-9]{12}" maxlength="12" minlength="12" placeholder="Beneficiary phone number" class="phone__number" autocomplete="on" required/>
-            <button type="submit">Proceed</button>
-        <form>
-    `
-)
-   
+
 // GET USER NETWORK TYPE 
 const getNetworkType = () =>{
     handlePreviousSection(init) // init IS THE PREVIOUS FUNCTION
@@ -41,9 +32,6 @@ const serviceMenu = (networkType) =>{
 }
 
 
-
-
-
 // get user phone number
 const getPhoneNumber = (event) =>{
     event.preventDefault()
@@ -55,8 +43,16 @@ const getPhoneNumber = (event) =>{
 
 // app init
 const init = () =>{
+    // GET USER BENEFICIARY NUMBER
+    const getBeneficiaryNumber = (
+        `
+            <form class="tel__input" onSubmit="getPhoneNumber(event)">
+                <input value="090123456790" type="tel" pattern="[0-9]{12}" maxlength="12" minlength="12" placeholder="Beneficiary phone number" class="phone__number" autocomplete="on" required/>
+                <button class="proceed__btn" type="submit">Proceed</button>
+            <form>
+        `
+    )
+   
     appContainer.classList.add("phone__section");
     appContainer.innerHTML = getBeneficiaryNumber;
-    appContainer.innerHTML = checkoutPage
-    appContainer.classList.add("dataPlan__section");
 }

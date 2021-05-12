@@ -1,24 +1,24 @@
-const mtnDataPlans = [
+const airtelDataPlans = [
     {
         id: 1,
         planID: "daily_0001", 
-        bundleName: "GoodyBag",
+        bundleName: "E chokee",
         value: "200mb",
-        price: 100,
+        price: 50,
         plan: "daily"
     },
     {
         id: 2,
         planID: "daily_0002", 
-        bundleName: "Hotplan",
+        bundleName: "Super D",
         value: "500mb",
-        price: 400,
+        price: 100,
         plan: "daily"
     },
     {
         id: 3,
         planID: "daily_0003", 
-        bundleName: "Awuf",
+        bundleName: "Rocket",
         value: "3GB",
         price: 1000,
         plan: "daily"
@@ -26,47 +26,47 @@ const mtnDataPlans = [
     {
         id: 4,
         planID: "weekly_0001", 
-        bundleName: "GoodyBag",
+        bundleName: "Campus",
         value: "10gb",
-        price: 1800,
+        price: 1500,
         plan: "weekly"
     },
     {
         id: 5,
         planID: "weekly_0002", 
-        bundleName: "Hotplan",
+        bundleName: "Head-light",
         value: "15gb",
-        price: 2200,
+        price: 2000,
         plan: "weekly"
     },
     {
         id: 6,
         planID: "weekly_0003", 
-        bundleName: "Awuf",
+        bundleName: "Dawn Awuf",
         value: "25gb",
-        price: 3200,
+        price: 3500,
         plan: "weekly"
     },
     {
         id: 7,
         planID: "monthly_0001", 
-        bundleName: "GoodyBag",
+        bundleName: "Draw them",
         value: "40gb",
-        price: 10000,
+        price: 10500,
         plan: "monthly"
     },
     {
         id: 8,
         planID: "monthly_0002", 
-        bundleName: "Hotplan",
+        bundleName: "Pepper Dem",
         value: "50gb",
-        price: 12000,
+        price: 12500,
         plan: "monthly"
     },
     {
         id: 9,
         planID: "monthly_0003", 
-        bundleName: "Awuf",
+        bundleName: "Full-stack plan",
         value: "1tb",
         price: 100000,
         plan: "monthly"

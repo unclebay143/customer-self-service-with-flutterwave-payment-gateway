@@ -1,18 +1,21 @@
 
-const makePayment = (transaction_ref) =>{
+const makeAirtimePayment = (transaction_ref) =>{
     // ENABLE THE SUCCESS PAGE
     localStorage.setItem("_openSuccess", true)
 
     // GET BENEFICIARY NUMBER FROM THE LOCAL STORAGE
     const retrieveBeneficiaryNumber = localStorage.getItem("_beneficiaryNumber")
-    const retrieveReceiptEmail = localStorage.getItem("_receipt_email")
 
     // GET PURCHASE DETAILS FROM THE LOCAL STORAGE
-    const  { price, bundleName, value} = JSON.parse(localStorage.getItem("_bundle"))
+    const retrieveRechargeAmount = localStorage.getItem("_recharge_amount")
+
+    // EMAIL TO SEND RECEIPT TO
+    const retrieveReceiptEmail = localStorage.getItem("_receipt_email")
+
     FlutterwaveCheckout({
         public_key: process.private.PAYMENT_KEY,
         tx_ref: transaction_ref,
-        amount: price,
+        amount: retrieveRechargeAmount,
         currency: "NGN",
         country: "NG",
         payment_options: "card, mobilemoneyghana, ussd",
@@ -31,8 +34,9 @@ const makePayment = (transaction_ref) =>{
         },
         customizations: {
             title: "Unclebigbay Service",
-            description: `Payment of ${price} for ${bundleName} ${value}`,
+            description: `Payment of ${retrieveRechargeAmount} Recharge card for ${retrieveBeneficiaryNumber}`,
             logo: "https://github.com/unclebay143.png",
+
         },
     });
 }
