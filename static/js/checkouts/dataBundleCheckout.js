@@ -13,6 +13,11 @@ const generateTxSub_id = () =>{
 
 
 const dataCheckoutPreview = () =>{
+        
+    // HIDE THE FOOTER
+    document.querySelector(".footer").style.display="none";
+    
+    // GET USER PROVIDED DETAILS FROM THE LOCAL STORAGE
     const retrieveNetworkProvider = localStorage.getItem("_networkProvider")
     const retrieveBeneficiaryNumber = localStorage.getItem("_beneficiaryNumber")
     const retrieveReceiptEmail = localStorage.getItem("_receipt_email")

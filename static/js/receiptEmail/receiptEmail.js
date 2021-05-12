@@ -6,7 +6,7 @@
 
 const getEmail = (event, callback) =>{
     // PREVENT FORM FROM RELOADING THE WEBPAGE
-    event.preventDefault()
+   event.preventDefault()
     
     // GET NUMBER FROM THE INPUT
     const receiptEmail = document.querySelector(".receiptEmail").value || "unclebigbay@gmail.com";

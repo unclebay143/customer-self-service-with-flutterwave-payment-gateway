@@ -8,6 +8,9 @@ const dataService = () =>{
 
     // ADD THE CSS STYLE FOR THE SECTION
     appContainer.classList.add("dataPlan__section");
+
+    // CHANGE THE FOOTER COLOR
+    document.querySelector(".footer").classList.add("footer__two")
     const showBundles = (
         `
             <div>

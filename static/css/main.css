@@ -198,6 +198,40 @@ div.accordion-item{
     border-bottom: 0px solid transparent;
 }
 
+
+.footer{
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 40px;
+    font-weight: 500;
+}
+
+.footer a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    color: var(--primary-color);
+}
+
+/* SECOND STYLE ON PLAN PAGE */
+.footer__two{
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.footer__two a{
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.footer__two a:hover{
+    color:#FFFFFF;
+    font-weight: 700;
+}
+
 @media (min-width: 900px){
     .phone__section > form{
         display: flex;

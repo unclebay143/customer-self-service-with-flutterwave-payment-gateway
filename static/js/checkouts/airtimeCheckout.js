@@ -12,6 +12,11 @@ const generateTxReg_id = () =>{
 
 
 const airtimeCheckoutPreview = () =>{
+    
+    // HIDE THE FOOTER
+    document.querySelector(".footer").style.display="none";
+
+    // GET USER PROVIDED DETAILS FROM THE LOCAL STORAGE
     const retrieveRechargeAmount = localStorage.getItem("_recharge_amount")
     const retrieveNetworkProvider = localStorage.getItem("_networkProvider")
     const retrieveBeneficiaryNumber = localStorage.getItem("_beneficiaryNumber")
