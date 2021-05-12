@@ -1,7 +1,7 @@
 // ONLY ALLOW ACCESS TO THE SUCCESS PAGE THROUGH SUCCESSFUL PAYMENT
 if(!JSON.parse(localStorage._openSuccess)){
   // REDIRECT USER BACK TO THE LANDING PAGE
-  // location.assign("./../../index.html")
+  location.assign("./../../index.html")
 }
 
 
