@@ -1,8 +1,11 @@
 
 const dataService = () =>{
+    // GET USER PROVIDED DETAILS FROM LOCALSTORAGE
     const retrieveNetworkProvider = localStorage.getItem("_networkProvider")
     const retrieveBeneficiaryNumber = localStorage.getItem("_beneficiaryNumber")
+
     handlePreviousSection(serviceMenu); // serviceMenu IS THE PREVIOUS FUNCTION
+
     // ADD THE CSS STYLE FOR THE SECTION
     appContainer.classList.add("dataPlan__section");
     const showBundles = (
@@ -17,10 +20,12 @@ const dataService = () =>{
     appContainer.innerHTML = showBundles;
 };
 
-
+// THIS FUNCTION PROVIDES THE USER WITH THE AVAILABLE DATA PLAN FOR EACH NETWORK
 const dataPlan = (planName) => {
+
     // ONLY UPDATE THE LOCAL-STORAGE WHEN THERE IS AN INPUT FROM THE USER
     planName && localStorage.setItem("_planName", planName)
+
     // GET THE PLAN NAME FROM THE LOCALSTORAGE
     const _planName = localStorage._planName
 
@@ -37,7 +42,7 @@ const dataPlan = (planName) => {
         default:
             break;
     }
-    console.log(serviceProvider);
+    // GET THE PLAN BUNDLE WHICH THE USER SELECTED
     const filterOutPlan = serviceProvider.filter((dataBundle)=>dataBundle.plan === _planName);
     appContainer.innerHTML = filterOutPlan.map(({bundleName, price, value}, index)=>{
         const currentServiceProvider = filterOutPlan[index]
@@ -59,10 +64,16 @@ const dataPlan = (planName) => {
     
 }
 
+// KEEP TRACK OF THE USER SELECTED BUNDLE
 const setBundle = (selectedBundle) =>{
-    console.log(selectedBundle);
+
+    // ADD THE CLASS NAME FOR THIS SECTION
     appContainer.classList.add("dataPlan__section");
+
+    // STORE BUNDLE TO LOCALSTORAGE
     localStorage.setItem('_bundle', JSON.stringify(selectedBundle))
+
+    // REDIRECT TO THE EMAIL FORM
     emailForReceipt("dataCheckoutPreview")
 }
 

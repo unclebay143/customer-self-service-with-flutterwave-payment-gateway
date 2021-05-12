@@ -24,7 +24,7 @@ const emailForReceipt = (callback) =>{
         `
             <form class="tel__input" onSubmit="getEmail(event, ${callback})">
                 <input 
-                    value="gmail@gmail.com" 
+                    value="" 
                     type="email" 
                     placeholder="Email for receipt (optional)" 
                     class="receiptEmail" 

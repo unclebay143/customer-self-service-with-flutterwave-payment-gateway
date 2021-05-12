@@ -1,4 +1,15 @@
 const viewAboutApplication = () =>{
+
+    // GET THE BACK BUTTON
+    const previousButton = document.querySelector(".back__btn"); 
+
+    // MAKE IT VISIBLE
+    previousButton.style.display = "block";
+
+    // ADD AN EVENT LISTENER TO IT
+    previousButton.addEventListener('click', ()=>window.location.reload())
+
+    // ADD THE ABOUT SECTION STILL TO THE APP CONTAINER
     appContainer.classList.add("full__container")
     const aboutContent = (`
         <div class="about__container">
@@ -7,7 +18,7 @@ const viewAboutApplication = () =>{
                 <p>This project is designed and developed by <strong class="author">Ayodele Samuel Adebao (unclebigbay)</strong></p>
                 <p>
                     This project is intended to be an educational material for <strong class="strong__words">myself</strong> and 
-                    also to <strong class="strong__words">anyone</strong> who is interested in learn learning with or through it.
+                    also to <strong class="strong__words">anyone</strong> who is interested in learning with or through it.
 
                     Kindly note that the payment gateway integrated in this project is not fake, 
                     be mindful while testing with real <strong class="strong__words">ATM</strong>.

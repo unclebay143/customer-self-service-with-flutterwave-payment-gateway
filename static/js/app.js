@@ -32,7 +32,7 @@ const serviceMenu = (networkType) =>{
 }
 
 
-// get user phone number
+// GET BENEFICIARY PHONE NUMBER
 const getPhoneNumber = (event) =>{
     event.preventDefault()
     const beneficiaryNumber = document.querySelector(".phone__number").value;
@@ -41,13 +41,13 @@ const getPhoneNumber = (event) =>{
     
 }
 
-// app init
+// APP INIT
 const init = () =>{
     // GET USER BENEFICIARY NUMBER
     const getBeneficiaryNumber = (
         `
             <form class="tel__input" onSubmit="getPhoneNumber(event)">
-                <input value="090123456790" type="tel" pattern="[0-9]{12}" maxlength="12" minlength="12" placeholder="Beneficiary phone number" class="phone__number" autocomplete="on" required/>
+                <input value="" type="tel" pattern="[0-9]{12}" maxlength="12" minlength="12" placeholder="Beneficiary phone number" class="phone__number" autocomplete="on" required/>
                 <button class="proceed__btn" type="submit">Proceed</button>
             <form>
         `
