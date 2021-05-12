@@ -47,7 +47,7 @@ const init = () =>{
     const getBeneficiaryNumber = (
         `
             <form class="tel__input" onSubmit="getPhoneNumber(event)">
-                <input value="" type="tel" pattern="[0-9]{12}" maxlength="12" minlength="12" placeholder="Beneficiary phone number" class="phone__number" autocomplete="on" required/>
+                <input value="" type="tel" pattern="[0-9]{11}" maxlength="12" minlength="11" placeholder="Beneficiary phone number" class="phone__number" autocomplete="on" required/>
                 <button class="proceed__btn" type="submit">Proceed</button>
             <form>
         `
